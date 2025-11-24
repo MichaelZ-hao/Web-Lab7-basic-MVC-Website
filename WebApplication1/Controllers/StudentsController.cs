@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Data;
 using WebApplication1.Models;
+using WebApplication1.ViewModels;
 
 namespace WebApplication1.Controllers
 {
@@ -16,10 +17,40 @@ namespace WebApplication1.Controllers
         private WebApplication1Context db = new WebApplication1Context();
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(string category,string search)
         {
+            StudentViewModel viewModel = new StudentViewModel();
             var students = db.Students.Include(s => s.Campus);
-            return View(students.ToList());
+            
+            if (!string.IsNullOrEmpty(search))
+            {
+                students = students.Where(s =>
+                    s.Name.Contains(search) ||       
+                    s.Address.Contains(search) ||    
+                    s.Campus.Name.Contains(search)   
+                 );
+                //ViewBag.Search = search;
+                viewModel.Search = search;
+            }
+            viewModel.CatsWithCount = from matchingStudents in students
+                                      where matchingStudents.Campus != null
+                                      group matchingStudents by matchingStudents.Campus.Name into campusGroup
+                                      select new StudentViewModel.CategoryWithCount
+                                      {
+                                          CampusName = campusGroup.Key,
+                                          StudentCount = campusGroup.Count()
+                                      };
+            var allCampuses = students.OrderBy(s => s.Campus.Name).Select(s => s.Campus.Name).Distinct();
+            if (!string.IsNullOrEmpty(category))
+            {
+                students = students.Where(s => s.Campus.Name == category);
+            }
+            //ViewBag.CampusOptions = new SelectList(allCampuses);
+            //ViewBag.Category = category;
+            //ViewBag.Search = search;
+            //return View(students.ToList());
+            viewModel.Students = students;
+            return View(viewModel);
         }
 
         // GET: Students/Details/5

@@ -1,5 +1,5 @@
-﻿@model IEnumerable<WebApplication1.Models.Student>
-
+﻿@*@model IEnumerable<WebApplication1.Models.Student>*@
+@model WebApplication1.ViewModels.StudentViewModel
 @{
     ViewBag.Title = "Index";
 }
@@ -9,37 +9,52 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@*@using (Html.BeginForm("Index", "Students", FormMethod.Get))
+    {
+        <label>Filter by category:</label> @Html.DropDownList("category", ViewBag.CampusOptions as SelectList, "All", new { @class = "form-control d-inline-block w-auto mr-2" })
+        <input type="Submit" value="Filter" />
+        <input type="hidden" name="Search" id="Search" value="@ViewBag.Search" />
+    }*@
+
+@using (Html.BeginForm("Index", "Students", FormMethod.Get))
+{
+    <label>Filter by category:</label>
+    @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+    <input type="Submit" value="Filter" />
+    <input type="hidden" name="Search" id="Search" value="@Model.Search" />
+}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Campus.Name)
+            @Html.DisplayNameFor(model => model.Students.First().Campus.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Students.First().Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address)
+            @Html.DisplayNameFor(model => model.Students.First().Address)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Campus.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model.Students)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Campus.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
