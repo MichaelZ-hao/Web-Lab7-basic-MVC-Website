@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "F:\\visualpractice\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|F:\\visualpractice\\WebApplication1\\webapplication1\\viewmodels\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\viewmodels\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|F:\\visualpractice\\WebApplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|f:\\visualpractice\\webapplication1\\webapplication1\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|F:\\visualpractice\\WebApplication1\\webapplication1\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\students\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|F:\\visualpractice\\WebApplication1\\webapplication1\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|f:\\visualpractice\\webapplication1\\webapplication1\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|F:\\visualpractice\\WebApplication1\\webapplication1\\viewmodels\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{785479B1-52C9-4AC4-BDB7-4186FA9E07F1}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\viewmodels\\studentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Students\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Students\\Index.cshtml",
+              "ToolTip": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Students\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Students\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T06:09:02.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "StudentViewModel.cs",
               "DocumentMoniker": "F:\\visualpractice\\WebApplication1\\WebApplication1\\ViewModels\\StudentViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\ViewModels\\StudentViewModel.cs",
               "ToolTip": "F:\\visualpractice\\WebApplication1\\WebApplication1\\ViewModels\\StudentViewModel.cs",
               "RelativeToolTip": "WebApplication1\\ViewModels\\StudentViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA3wBcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAA3wCEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T06:24:56.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Students\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Students\\Index.cshtml",
-              "ToolTip": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Students\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Students\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-19T06:10:31.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-19T05:40:03.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\StudentsController.cs",
               "ToolTip": "F:\\visualpractice\\WebApplication1\\WebApplication1\\Controllers\\StudentsController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\StudentsController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAowFMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T05:24:04.132Z",
               "EditorCaption": ""

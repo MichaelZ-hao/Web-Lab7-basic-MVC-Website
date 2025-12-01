@@ -88,3 +88,11 @@ F:\visualpractice\WebApplication1\WebApplication1\bin\EntityFramework.dll
 F:\visualpractice\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
 F:\visualpractice\WebApplication1\WebApplication1\bin\EntityFramework.xml
 F:\visualpractice\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml
+F:\visualpractice\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialCreate.resources
+F:\visualpractice\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.GenerateResource.cache
+F:\visualpractice\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialDatabase.resources
+F:\visualpractice\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Migrations.AddValidationToModels.resources
+F:\visualpractice\WebApplication1\WebApplication1\bin\PagedList.dll
+F:\visualpractice\WebApplication1\WebApplication1\bin\PagedList.Mvc.dll
+F:\visualpractice\WebApplication1\WebApplication1\bin\PagedList.xml
+F:\visualpractice\WebApplication1\WebApplication1\bin\PagedList.Mvc.xml

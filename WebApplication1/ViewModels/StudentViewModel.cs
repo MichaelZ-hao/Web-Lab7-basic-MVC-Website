@@ -4,15 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using PagedList;
 
 namespace WebApplication1.ViewModels
 {
     public class StudentViewModel
     {
-        public IQueryable<Student> Students { get; set; }
+        public IPagedList<Student> Students { get; set; }
         public string Search { get; set; }
         public IEnumerable<CategoryWithCount> CatsWithCount { get; set; }
         public string Category { get; set; }
+
+        public string SortBy { get; set; }
+        public Dictionary<string, string> Sorts { get; set; }
         public IEnumerable<SelectListItem> CatFilterItems
         {
             get

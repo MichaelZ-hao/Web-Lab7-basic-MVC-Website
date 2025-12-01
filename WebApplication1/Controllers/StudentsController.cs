@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using WebApplication1.Data;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
+using PagedList;
 
 namespace WebApplication1.Controllers
 {
@@ -17,7 +18,7 @@ namespace WebApplication1.Controllers
         private WebApplication1Context db = new WebApplication1Context();
 
         // GET: Students
-        public ActionResult Index(string category,string search)
+        public ActionResult Index(string category,string search,int? page,string sortBy)
         {
             StudentViewModel viewModel = new StudentViewModel();
             var students = db.Students.Include(s => s.Campus);
@@ -45,11 +46,40 @@ namespace WebApplication1.Controllers
             {
                 students = students.Where(s => s.Campus.Name == category);
             }
+
+            switch (sortBy)
+            {
+                case "name_asc": 
+                    students = students.OrderBy(s => s.Name);
+                    break;
+                case "name_desc": 
+                    students = students.OrderByDescending(s => s.Name);
+                    break;
+                case "campus_asc":
+                    students = students.OrderBy(s => s.Campus.Name);
+                    break;
+                default: 
+                    students = students.OrderBy(s => s.Name);
+                    break;
+            }
+
+            //students = students.OrderBy(s => s.Name);
+            const int PageSize = 3;
+            int pageNumber = (page ?? 1);
+            viewModel.Students=students.ToPagedList(pageNumber, PageSize);
+            
+            viewModel.SortBy= sortBy;
+            viewModel.Sorts = new Dictionary<string, string>
+            {
+                 { "Name (A-Z)", "name_asc" },
+                 { "Name (Z-A)", "name_desc" },
+                 { "Campus (A-Z)", "campus_asc" }
+            };
             //ViewBag.CampusOptions = new SelectList(allCampuses);
             //ViewBag.Category = category;
             //ViewBag.Search = search;
             //return View(students.ToList());
-            viewModel.Students = students;
+            //viewModel.Students = students;
             return View(viewModel);
         }
 

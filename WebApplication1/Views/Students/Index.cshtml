@@ -1,10 +1,17 @@
 ﻿@*@model IEnumerable<WebApplication1.Models.Student>*@
 @model WebApplication1.ViewModels.StudentViewModel
+@using PagedList.Mvc;
+@Styles.Render("~/Content/PagedList.css")
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+
+<p>
+    @(string.IsNullOrWhiteSpace(Model.Search) ? "Showing all" : $"You searched for '{Model.Search}' and found")
+    @Model.Students.TotalItemCount students
+</p>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -20,6 +27,9 @@
 {
     <label>Filter by category:</label>
     @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+
+    <label>Sort by:</label>
+    @Html.DropDownListFor(vm => vm.SortBy, new SelectList(Model.Sorts, "Value", "Key"), "Default");
     <input type="Submit" value="Filter" />
     <input type="hidden" name="Search" id="Search" value="@Model.Search" />
 }
@@ -58,3 +68,14 @@
     }
 
 </table>
+
+<div>
+    Page @(Model.Students.PageCount < Model.Students.PageNumber ? 0 : Model.Students.PageNumber) of @Model.Students.PageCount
+    @Html.PagedListPager(Model.Students, page => Url.Action("Index", new
+    {
+        category = Model.Category,
+        search = Model.Search,
+        sortBy = Model.SortBy,
+        page
+    }))
+</div>
